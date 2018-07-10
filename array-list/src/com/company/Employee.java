@@ -37,6 +37,26 @@ public class Employee {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Employee)) return false;
+
+        Employee employee = (Employee) o;
+
+        if (getId() != employee.getId()) return false;
+        if (!getFirstName().equals(employee.getFirstName())) return false;
+        return getLastName().equals(employee.getLastName());
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getFirstName().hashCode();
+        result = 31 * result + getLastName().hashCode();
+        result = 31 * result + getId();
+        return result;
+    }
+
+    @Override
     public String toString() {
         return "Employee{" +
                 "firstName='" + firstName + '\'' +

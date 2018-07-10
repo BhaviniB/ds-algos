@@ -1,5 +1,7 @@
 package com.company;
 
+import com.sun.prism.shader.Solid_TextureYV12_AlphaTest_Loader;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,6 +31,11 @@ public class Main {
         for(Employee employee:employeeArray){
             System.out.print(employee);
         }
+        System.out.println(employeeList.contains(new Employee("Archie","Andrews",22)));//false
+        //eventho they are structurallty the same, it is a new instatnce thats been created but if we override euqlas() then it ll give true
+        System.out.println(employeeList.indexOf(new Employee("Archie","Andrews",22)));//4
+        
+
 
 
 
