@@ -17,6 +17,13 @@ public class Main {
 
 
         System.out.print(employeeList.isEmpty());
+        employeeList.set(1,new Employee("Hiram","Lodge",2));
+        employeeList.forEach(employee -> System.out.println(employee));//lambda expr
+
+        System.out.println(employeeList.size());
+        
+
+
 
 
 
