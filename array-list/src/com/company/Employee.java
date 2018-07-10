@@ -24,7 +24,7 @@ public class Employee {
         return id;
     }
 
-    public void setFirstName(String firstName) { 
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
@@ -34,5 +34,14 @@ public class Employee {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", id=" + id +
+                '}';
     }
 }
