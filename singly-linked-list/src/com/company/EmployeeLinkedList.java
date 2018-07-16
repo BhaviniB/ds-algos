@@ -19,6 +19,18 @@ public class EmployeeLinkedList {
         {return true;
     }
     return false;}
+    public EmployeeNode removeFromFront(){
+        if(isEmpty()){
+            System.out.println("nothinhg to remove");
+            return null;
+        }
+        EmployeeNode removedNode= head;
+        head=head.getNext();
+        size--;
+        removedNode.setNext(null);
+        return removedNode;
+
+    }
 
     public void printList(){
 

@@ -16,6 +16,10 @@ public class Main {
         System.out.println(l.getSize());
         System.out.println(l.isEmpty());
 
+        l.removeFromFront();
+        System.out.println(l.getSize());
+
+
 
 
 
