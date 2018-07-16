@@ -13,6 +13,7 @@ public class Main {
         l.addToFront(jugheadJones);
         l.addToFront(johnJones);
         l.printList();
+        System.out.println(l.getSize());
 
 
 
