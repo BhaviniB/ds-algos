@@ -14,6 +14,8 @@ public class Main {
         l.addToFront(johnJones);
         l.printList();
         System.out.println(l.getSize());
+        System.out.println(l.isEmpty());
+
 
 
 
