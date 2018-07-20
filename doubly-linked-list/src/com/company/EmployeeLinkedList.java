@@ -3,10 +3,20 @@ package com.company;
 public class EmployeeLinkedList {
 
     private EmployeeNode head;
+    private EmployeeNode tail;
+
     private int size;
     public void addToFront(Employee employee){
         EmployeeNode node=new EmployeeNode(employee);
         node.setNext(head);
+//check if we are adding to an empty list
+        if(head==null){
+
+            tail=node;
+        }
+        head.setPrevious(node);
+        
+
         head=node;
         size++;
     }

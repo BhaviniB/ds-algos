@@ -3,6 +3,16 @@ package com.company;
 public class EmployeeNode {
     private Employee employee;
     private EmployeeNode next;
+    private EmployeeNode previous;
+
+    public void setPrevious(EmployeeNode previous) {
+        this.previous = previous;
+    }
+
+    public EmployeeNode getPrevious() {
+
+        return previous;
+    }
 
     public EmployeeNode(Employee employee)
     //only takes employee cause when we create an instance we do not know what the next node will be
