@@ -17,6 +17,8 @@ public class Main {
         l.printList();
         l.removeFromFront();
         l.printList();
+        l.removeFromLast();
+        l.printList();
 
 //        System.out.println(l.getSize());
        // System.out.println(l.isEmpty());

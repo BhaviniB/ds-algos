@@ -67,6 +67,31 @@ public class EmployeeDoublyLinkedList {
         return removedNode;
 
     }
+    public EmployeeNode removeFromLast() {
+
+       if (isEmpty()) {
+            return null;
+        }
+        //if theres jus one in the list
+
+        EmployeeNode removedNode= tail;
+
+
+        if (tail.getNext()==null) {
+           head=null;
+        }
+
+        else {
+
+           tail.getPrevious().setNext(null);
+
+        }
+        tail=tail.getPrevious();
+        size--;
+        removedNode.setPrevious(null);
+        return removedNode;
+
+    }
 
     public void printList(){
 
