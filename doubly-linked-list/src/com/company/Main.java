@@ -15,6 +15,9 @@ public class Main {
         Employee billEnd=new Employee("Bill","End",7777);
         l.addToEnd(billEnd);
         l.printList();
+        l.removeFromFront();
+        l.printList();
+
 //        System.out.println(l.getSize());
        // System.out.println(l.isEmpty());
 
