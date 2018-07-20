@@ -7,17 +7,19 @@ public class Main {
         Employee johnJones=new Employee("John","Jones",4454);
         Employee jugheadJones=new Employee("Jughead","Jones",5335);
         Employee fpJones=new Employee("FP","Jones",1155);
-        EmployeeLinkedList l=new EmployeeLinkedList();
+        EmployeeDoublyLinkedList l=new EmployeeDoublyLinkedList();
         l.addToFront(jameJones);
         l.addToFront(fpJones);
         l.addToFront(jugheadJones);
         l.addToFront(johnJones);
+        Employee billEnd=new Employee("Bill","End",7777);
+        l.addToEnd(billEnd);
         l.printList();
-        System.out.println(l.getSize());
-        System.out.println(l.isEmpty());
+//        System.out.println(l.getSize());
+       // System.out.println(l.isEmpty());
 
-        l.removeFromFront();
-        System.out.println(l.getSize());
+        //l.removeFromFront();
+        //System.out.println(l.getSize());
 
 
 

@@ -1,6 +1,6 @@
 package com.company;
 
-public class EmployeeLinkedList {
+public class EmployeeDoublyLinkedList {
 
     private EmployeeNode head;
     private EmployeeNode tail;
@@ -13,12 +13,28 @@ public class EmployeeLinkedList {
         if(head==null){
 
             tail=node;
+        }else {
+            head.setPrevious(node);
         }
-        head.setPrevious(node);
-        
 
         head=node;
         size++;
+    }
+
+
+    public void addToEnd(Employee employee){
+        EmployeeNode node=new EmployeeNode(employee);
+       if(tail==null){
+           head.setNext(node);
+       }
+       else{
+
+           tail.setNext(node);
+           node.setPrevious(tail);
+       }
+       tail=node;
+       size++;
+
     }
     public int getSize()
     {
@@ -49,7 +65,7 @@ public class EmployeeLinkedList {
         System.out.println("Head->");
         while (current!=null){
             System.out.println(current);
-            System.out.println("->");
+            System.out.println("<->");
             current=current.getNext();
 
         }
